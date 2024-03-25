@@ -13,10 +13,11 @@ import Footer from "../components/Footer";
 
 const Home = () => {
   const [isSigningIn, setIsSigningIn] = useState(true);
+  const [mobileSigningIn, setMobileSigningIn] = useState(true);
 
-  const toggleSignIn = () => {
-    setIsSigningIn(!isSigningIn);
-  };
+  // const toggleSignIn = () => {
+  //   setIsSigningIn(!isSigningIn);
+  // };
 
   return (
     <>
@@ -66,7 +67,20 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="w-[312px] h-[364px] mt-12  bg-slate-800"></div>
+          <div className="w-[312px] h-[364px] mt-12">
+            <div className="flex justify-between w-[149px] h-[28px] items-center mx-[82px]">
+              <div className={`font-poppins text-xs ${
+                mobileSigningIn ? "text-[#8064A2] underline" : " text-[#939CA3]"
+              }`}
+              onClick={() => setMobileSigningIn(true)}>Sign In</div>
+              <div className={`font-poppins text-xs ${
+                !mobileSigningIn ? "text-[#8064A2] underline" : "text-[#939CA3]"
+              }`}
+              onClick={() => setMobileSigningIn(false)}>Join In</div>
+            </div>
+
+            {mobileSigningIn ? <SignIn /> : <JoinIn />}
+          </div>
 
           <div className="w-[312px] h-[96px] mt-12">
             <img src={Hero} alt="" />
@@ -98,6 +112,8 @@ const Home = () => {
 
           {isSigningIn ? <SignIn /> : <JoinIn />}
         </div>
+
+
       </div>
 
       {/* <section>
