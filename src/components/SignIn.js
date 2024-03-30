@@ -67,7 +67,7 @@ const SignIn = () => {
           />
         </div>
 
-        <div className="flex justify-between font-normal text-xs font-poppins mt-4">
+        <div className="flex justify-between font-normal text-xs font-poppins mt-4 h-[16px]">
           <div>
             <input type="checkbox" /> Remember Me
           </div>
