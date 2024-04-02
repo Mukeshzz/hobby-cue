@@ -116,7 +116,7 @@ const Home = () => {
 
       </div>
 
-      {/* <section>
+      <section>
         <div className="flex w-[1440px] h-[818px] bg-[#FFFFFF]">
           <div className="grid grid-cols-2 justify-between bg-[#FFFFFF] w-[1240px] h-[618px] m-[100px] rounded-md">
             <div className="flex justify-start items-start">
@@ -235,7 +235,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Footer /> */}
+      <Footer />
     </>
   );
 };
